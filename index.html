@@ -8,16 +8,23 @@
     <title>Be a GoodDay</title>
 </head>
 <body>
-    <div class="js-clock">
+    <div class="js-clock"> <!--clock-->
         <h1>00:00</h1>
     </div>
 
-    <form class="js-form form">
+    <form class="js-form username__form"> <!--username 받는 form-->
         <input type="text" placeholder="What is your name?"/>
     </form>
     <h4 class="js-greeting greeting"></h4>
 
+    <form class="js-todoform">
+        <input type="text" placeholder="What is your plan?">
+    </form>
+    <ul class="js-todolist"></ul>
+
+
     <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
 </body>
 </html>

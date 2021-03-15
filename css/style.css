@@ -4,11 +4,19 @@ body {
   padding: 0;
 }
 
-.form,
+.username__form,
 .greeting {
   display: none;
 }
 
 .showing {
   display: block;
+}
+
+input{
+  border-style: none;
+}
+
+li{
+  list-style: none;
 }
