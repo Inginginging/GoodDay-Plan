@@ -1,0 +1,9 @@
+.clock {
+  position: absolute;
+  top: 150px;
+  font-size: 80px;
+}
+
+.clock h1 {
+  margin: 0;
+}

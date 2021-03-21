@@ -11,8 +11,7 @@ function getWeather(lat, lon){
     .then(function(json){
        const tem=json.main.temp;
        const city=json.name;
-       const weather=json.weather[0].main;
-       weather.innerText =`${tem}℃<\n>${city}`;
+       weather.innerText =`${tem} ℃\n${city}`;
     });
 }
 

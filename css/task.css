@@ -1,0 +1,69 @@
+nav {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  height: 98%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.taskBar {
+  width: auto;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.taskBar span {
+  padding-right: 200px;
+}
+#trigger {
+  text-decoration: none;
+  font-size: 40px;
+  color: black;
+}
+
+.todoForm {
+  width: 100%;
+}
+.todoForm input {
+  width: 90%;
+  font-size: 30px;
+}
+.todoForm input::placeholder {
+  color: rgba(225, 225, 225, 0.8);
+}
+
+.todoList,
+.finishedList {
+  padding: 0;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.finishedList {
+  margin-top: 30px;
+}
+.todoList li,
+.finishedList li {
+  font-size: 28px;
+}
+.todoList li span,
+.finishedList li span {
+  margin-right: 10px;
+}
+.todoList li button,
+.finishedList li button {
+  background: none;
+  border-style: none;
+  font-size: 18px;
+  margin-right: 3px;
+  padding: 0;
+  cursor: pointer;
+}

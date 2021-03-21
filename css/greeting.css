@@ -1,0 +1,23 @@
+.username__form,
+.greeting {
+  display: none;
+  margin: 0;
+  position: absolute;
+  top: 310px;
+}
+
+.username__form input {
+  font-size: 30px;
+  width: 240px;
+}
+.username__form input::placeholder {
+  color: rgba(225, 225, 225, 1);
+  font-size: 36px;
+}
+.greeting {
+  font-size: 40px;
+}
+
+.showing {
+  display: block;
+}

@@ -8,7 +8,9 @@
     <title>Be a GoodDay</title>
 </head>
 <body>
-    <div class="js-clock"> <!--clock-->
+    <span class="js-weather weather"></span><!--weather-->
+    
+    <div class="clock js-clock"> <!--clock-->
         <h1>00:00</h1>
     </div>
 
@@ -17,17 +19,38 @@
     </form>
     <h4 class="js-greeting greeting"></h4>
 
-    <form class="js-todoform">
-        <input type="text" placeholder="What is your plan?">
-    </form>
-    <ul class="js-todolist"></ul>
-
-    <span class="js-weather"></span>
-
+    <div class="link">
+        <a target="blank" href="https://www.naver.com"><img src="https://mblogthumb-phinf.pstatic.net/MjAxODA2MzBfMjI4/MDAxNTMwMzQ1MDg1MDU1.4hjqKQKk4kVKAZBR58Sjsf1wF9KfV2Aahqp1B-c0ML0g.7kdimnePwiBLXhr310KxVUAL0fQkTSVHxxCKgIjip2Qg.PNG.beaqon/naver.png?type=w800"></a>
+        <a target="blank" href="https://www.google.com"><img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/77un/image/9qRaYD5XFGeUyP2_oM9RaSG1O6U"></a>  
+        <a target="blank" href="https://www.nate.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9Nr8BITVB4k2o8wNpfG6RqVgqfIYR0H8ehQ&usqp=CAU"></a>
+        <a target="blank" href="https://www.daum.net/"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDg0NDQ0PDQ0NDQ4NDQ0NDQ8ODQ0NFREWFhURFRUYKCggJBoxGxMTITMhJik3Li4uFx8zOD8tNygvLisBCgoKDg0OFxAQGisdHx4rMC0rLSwwLS0wLystLS4tLS0tKy0uNysrNy0tLi0vLSsrKzErLysrLS0rLjAtLSstK//AABEIAOEA4QMBEQACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQIDBQYEB//EAD8QAQACAAMBCgsHAgcAAAAAAAABAgMEEQYFEhYhMTRTcrLREyJBUWFxgZGSo+IyM1JUc5OxI2JCQ2ShwfDx/8QAGwEBAAMBAQEBAAAAAAAAAAAAAAECAwQFBgf/xAA1EQEAAgEDAAULAwQDAQAAAAAAAQIRAwQSBSExUaETFBUyM0FhYnHR4YGR8CJSY7EjJHIG/9oADAMBAAIRAxEAPwD7iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMg0OZ2sylLTWPCYmnFvsOsb32TMw76dHa1oz1R9XPbc0icdrFwyyvR43w071/Rmr3x4/ZHndPijhllejxvhp3nozV748fsjzundKeGWV6PG+Gnej0Zq98eP2PO6d0nDHK9HjfDTvPRur3x/P0PO6fFPDDK9HjfDTvR6O1e+P5+ifOqfFPC/LdHjfDTvV9H6vfH8/Q86p8U8Lst0eN8NO9E7HU74T5zT4r02qys8sYtfXSJ/iVJ2mpHcmNxR7cvu3lMT7OPWJ819adrRjbRvXthpGrWfe98TE8cTrE8kxyM10gAAAAAAAAAAAAAAAA1u0d5rk8xMTpO83vsmYif8AaZdO0iJ1q572et6kvmz6R5ZoINE5CIRkTorMi0QrMpWiFJlK0QymVl4ZWlMLRDC0rw9WTzmNgzrhYlqeiJ8WfXE8TmvET2tK2mOx0e520sTpXMV3s9JSJ3vtjuctq4dFdXvdBh3raItWYtWY1iYnWJhVqsAAAAAAAAAAAAAADV7T8zzHVr24dOz9tVnrepL51o+iy8zBonKEaGTCdFcmExCJlKYhSZF4hSZStEMplaFohlaVoXhhaVoWiGFpXheHNeVobDczdLEy8+LO+pM+NhzPFPpjzS55viWtZw7HJZumPSL4c6xyTE8tZ80tK2i0ZhszrAAAAAAAAAAAAADV7Tczx+rXtw6dp7arPV9SXzzR9Bl52EaGUYNDJhOiMmExCsyJiFJlK8QpMpwtEMplK0QxtKy0QwtK0LxDC0rwtEOa8rwvDlvK8PZudnL5e8XrxxyXr5LV72Eas0nMNIdpl8euLSt6TrW0ax3PRpeLxyhZkWAAAAAAAAAAAAGs2m5nj9Wvbh0bT21VNT1JfPHv5cGAyjAjKMCsyYTorMpwtCkyYWiFJlOF4YzKcLRDK0rRC8QwtK0QtEOe0rxC0Q5r2XiF4hy3leIXiHLezSIbjZ/O+Dv4O0+JiTxf238nd7l9puOF+E9k/wC1pjqdO9hUAAAAAAAAAAABrNpeZ4/Vr24dG19rVTU9WXz3R7mXHgMowK5MJ0RMmG12f3Lpm73re1qxSkW8TTWZmdPK5dxrzpxGPe009OLdrfcEsv0uN76dzj88v3R/P1beQqngngdLi++ncr51fug8hVPBTA6XF99O5Wdxb4HkasWNsrH+XjTr5r1idfbHcjy0z2k6PdLTZ3c/FwJ0xK6RPJaOOlvVKk3ypNJjteeIYWsmIXiHNey8QtEOa9mkQvEOS9l4herkvZpEOw3MzPhcKtp+19m3Wj/uvtfRbPX8tpRb39k/VnaMS9TqVAAAAAAAAAAAazaXmeP1a9uG+29rVW3ZL589rLmwIyjCVZlGBWZMOk2J+9xv069pxbyeqG2jHa69wNwAAFMbCres0vWLVtGkxPJIOP3X3NnL30jjw7cdLT2Z9Ln1OpnNcPFEOS9kxC8Q5b2aRC0Q5b2aRC8Q472aRDd7O4ulr4fnjfx644p/mPc9LobX/wCS2nPvjP7dqurXqiW9fQsAAAAAAAAAAAGs2l5nj9Wvbhtt/aVRPY+fvXyxwIyjArMmEqzJh0mxX3uN+nXtOPdT1Q0047XXONoAAAA8m6mVjGwb008aI31PRaOTu9qmpXlWYHGxDyL2IhaIct7NIheIcl7NIheIcl7NIh7dyrb3Gw588733xo06O1eO70/jOP3hN6/0S6h9s4gAAAAAAAAAAGs2k5nj9Wvbhtoe0gfP3p5V4iJlHFKkycRWZOLpNivvcb9OvacuvPYmsYdc5lgAAAAHE5um9xcWsckYl4j1b6dHg684vaPi0iFYhw3svELxDkvZpELRDkvZpEPRlOLEw+vT+YU298bjT/8AVf8AcLWj+mfo6t+ivOAAAAAAAAAAAazaTmeP1a9uGuj68Jr2vn70JlfiKzKOKVJk4ik2RxdJsV97jfp17TDVnOCYw65iqAAAAA4rO332NjT58W+nq30vm9xfOpb6y6a16oVo8+9l+LJWHJey8QvEOS9mkQz5WP6mH16/zCu2tnc6UfNX/cLWj+mfo6l+mPKAAAAAAAAAAAazaXmeP1a9uGml68L6frQ+fOyZdHEVmUcUqTZHFLObHF0mxX3uN+nXtMrTlnqRiHXKsgAAAHn3QzMYOFfEnliPF9Np4oj3stfVjT05stSvKYhxVZfKXs7+LLVyXsmKs1XHey0VZYhx3svEPXudTXFw49Ovu4/+HT0RTym+0o+Of2jKutONOXRP0p5QAAAAAAAAAADWbS8zx+rXtQvT1oaaPrw+euiZd3EUmyOKVJsjilnNji6TYn73G/Tr2lInMsNeMRDr1nMAAAi0xETMzpERrMzxREImcdcjkt3N0/D3ilJ/pUni/vt+LufP77d+VnjXsjxeho6PGMz2tfV5F7OiKstXJeyYqzUcd7LRVmrLkt1pw2m4mHra1/wxpHrn/wAfSf8AzG35a19WeysY/WfxHi495bFYq3L7Z54AAAAAAAAAADWbTczx+rXtQmva22/tIfO9Wk2epxTqpNkcTVSbI4p1ZzY4t3sxujhZbExJxZmtb0iImKzbjifQrW8RPWw19K1oji6PhLkuln9rE7lvLUc3m2p3J4SZLpZ/axO5XzjT7zzXV7jhHk+ln9vE7lZ3elHvPNdXuYsfafL1jxIviT5NK72PfPcyvv8ATr2ZleuzvPb1NHujuxjZjxZ8TD6OvJPrnyvK3O8vq9U9Udzr0ttWnxl4qy829nRxZKuS9k8WWkuS9luLLWXNYmGStmUqzDqNzMDweFWJ+1bxreufJ7tH6L0PtPNtrWs9s9c/WftGHj7i/O8vU9RgAAAAAAAAAAA1e03M8x1a9qB0bX2tXzrVE2e3wTqpNkcDVnNkcExLObI4rRLKbHBMSxtZPBaJY2scV4lhayeC0S57WTxZKy573W4L1ly3sniyVlzXsniyVswlEwyVsylWYbPcXK+FxNZjxKaTb0z5Iet0LsPOdflaP6adc/GfdH3+Dk3er5OmI7ZdO+9eMAAAAAAAAAAAA1e0/Msx1a9qET2OrZRnXq+casZs+i4GrObI4J1ZzY4JiWU2RwTEsrWOC0SxtY4LRLG1k8FolhayeC8S57WTwXiXPayeK8SwsjC8WYyrhkizOVcPTk8C+NeMOkazPuiPLM+hfb7a+41I06R1z4R3yy1b106zazssnlq4NIpXkjlny2nyzL9B2m1pttKNOnu8Z73z+rqTqWm0s7pZgAAAAAAAAAAANVtRzLMdWO1Cl/Vl2bCM7in89z5tq5Js+q4J1ZzZHA1ZzY4JiWVrI4LasbWOCYljaxwWiWNrHFaJY2kwvEsbIwtEspRMLxLKVcLxZlKsw9eQymJj33mHGv4pn7NY88y12201Nzfhpx9Z90fVhratNKvKzs9zdz6Zem9rx2n7d55bT3eh9rsdhp7SnGvXM9s9/wDO58/uNxbWtmez3Q9juYAAAAAAAAAAAAANXtPEzkszp+DX2RaJlTU9WXZ0fP8A2afV8z1cMvrzVlIaspMJ1ZSJ1ZSjC0SylGExLOUYWiWUowvEspRhaJZSrhlwaWvMVpWbWnkrWJtM+yFIpa88axmfgpeYrGbTiHQ7mbM4l9LZifB1/BExOJPr8kPX2vQl7zy1p4x3e/7Q8vcdJUr1afXPf7nU5bLYeDWKYdYrWPJHl9Mz530mjoaejXhpxiHi6mpbUtytOZZWqgAAAAAAAAAAAAACt6RaJraImtomJieOJieWBMTMTmHK5nYnDtaZwse2HWeOKWpv976InWOJz228T2S9rT6atEYvXM9+cMPAb/VfJ+pnO1+LT03/AI/H8HAafzXyfqVnZ/N4Hpv/AB+P4TwHn818n6lJ2HzeH5R6b/x+P4OA8/mvk/UrPR3zeH5PTfyeP4TwIn818n6lJ6Mn+7w/J6a+Tx/CeBM/mvk/UrPRU/3+H5R6a+Tx/CeBU/mvk/UrPRE/3+H5PTPyeP4ZMPYyv+LM2nq4cR/MyiOhq++8/spPTM+6ni92X2VylPtRfF699I91dG9OiNvX1s2+s/bDnv0pr27MR9I+7b5fLYeFG9w8OuHHmrWI1ehp6VNOMUrEfRwX1b6k5vMyytFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/9k="></a>
+        <a target="blank" href="https://www.youtube.com/"><img src="https://littledeep.com/wp-content/uploads/2020/09/youtube-icon-style.png"></a>
+    </div>
+  
+    
+    <nav class="task ">
+        <div class="taskBar js-taskBar">
+            <a href="#" id="trigger"><span>Task</span><i class="fas fa-bars"></i></a>
+        </div>
+        <form class="todoForm js-todoform">
+            <input type="text" placeholder="What is your plan?">
+        </form>
+        <ul class="todoList js-todolist">
+            <span>Pending</span>
+        </ul>
+        <ul class="finishedList js-finishedList">
+            <span>Finished</span>
+        </ul>
+    </nav>
+    
     <script src="js/clock.js"></script>
     <script src="js/greeting.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/bg.js"></script>
     <script src="js/weather.js"></script>
+    <script   
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script> <!--폰트어썸 js 키트-->
 </body>
 </html>
