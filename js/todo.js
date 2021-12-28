@@ -1,7 +1,8 @@
 const toDoForm = document.querySelector(".js-todoform"),
     toDoInput = toDoForm.querySelector("input"),
     toDoList = document.querySelector(".js-todolist"),
-    finishedList = document.querySelector(".js-finishedList");
+    finishedList = document.querySelector(".js-finishedList"),
+    task = document.querySelector(".task");
 
 const TODO_LS = "todos";
 const FIN_LS = "finished";
@@ -94,14 +95,10 @@ function paintTodos(text){
     const newId = toDos.length+1;
     delBtn.innerText = '❌';
     delBtn.addEventListener('click',handleDeleteToDo);
-    const goBtn = document.createElement("button");
-    goBtn.innerText = '👇'
-    goBtn.addEventListener('click', finishedToDo);
     span.innerText=text;
     const li = document.createElement("li");
     li.id=newId;
     li.appendChild(span);
-    li.appendChild(goBtn);
     li.appendChild(delBtn);
     toDoList.appendChild(li);
     const toDoObj ={
@@ -112,32 +109,6 @@ function paintTodos(text){
     saveToDos();
 }
 
-function saveFinished(){
-    localStorage.setItem(FIN_LS,JSON.stringify(finished));
-}
-
-function paintFinished(text){
-    const span = document.createElement("span");
-    const delBtn = document.createElement("button");
-    delBtn.innerText='❌'
-    delBtn.addEventListener('click', handleDeleteFin);
-    const backBtn = document.createElement("button");
-    backBtn.innerText='👆'
-    backBtn.addEventListener('click', backTodo);
-    const newID = finished.length+1;
-    const li = document.querySelector("li");
-    li.appendChild(span);
-    li.appendChild(backBtn);
-    li.appendChild(delBtn);
-    li.id=newID;
-    finishedList.appendChild(li);
-    const finObj ={
-        text: text,
-        is: newID
-    };
-    finished.push(finObj);
-    saveFinished();
-}
 
 function handleSubmit(event){
     event.preventDefault();
@@ -165,7 +136,7 @@ function loadToDos(){
 
 function init(){
     loadToDos();
-    toDoForm.addEventListener("submit", handleSubmit)
+    toDoForm.addEventListener("submit", handleSubmit);
 }
 
 init();

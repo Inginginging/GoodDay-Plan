@@ -3,16 +3,16 @@
   display: none;
   margin: 0;
   position: absolute;
-  top: 310px;
+  top: 400px;
 }
 
 .username__form input {
   font-size: 30px;
-  width: 240px;
+  width: 280px;
 }
 .username__form input::placeholder {
   color: rgba(225, 225, 225, 1);
-  font-size: 36px;
+  font-size: 30px;
 }
 .greeting {
   font-size: 40px;
