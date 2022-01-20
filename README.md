@@ -1,2 +1,4 @@
 # GoodDay-Plan
-2nd To Do List(vanilla JS)
+
+Using  
+1. Vanilla JS
